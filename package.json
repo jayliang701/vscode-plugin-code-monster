@@ -1,0 +1,73 @@
+{
+    "name": "vscode-plugin-code-monster",
+    "displayName": "vscode-plugin-code-monster",
+    "description": "A vscode plugin for generating code.",
+    "keywords": [
+        "vscode",
+        "plugin",
+        "template",
+        "generation"
+    ],
+    "version": "1.0.0",
+    "publisher": "jayliang701",
+    "engines": {
+		"vscode": "^1.41.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "icon": "images/icon.png",
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./src/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.chooseTemplate",
+                "title": "代码生成器"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.chooseTemplate",
+                "key": "ctrl+f10",
+                "mac": "cmd+f10",
+                "when": "editorTextFocus"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "when": "filesExplorerFocus",
+                    "command": "extension.chooseTemplate",
+                    "group": "navigation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jayliang701/vscode-plugin-code-monster/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jayliang701/vscode-plugin-code-monster"
+    },
+    "homepage": "https://github.com/jayliang701/vscode-plugin-code-monster/blob/master/README.md"
+}
