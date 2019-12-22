@@ -11,7 +11,7 @@
     "version": "1.0.0",
     "publisher": "jayliang701",
     "engines": {
-		"vscode": "^1.41.0"
+        "vscode": "^1.41.0"
     },
     "categories": [
         "Other"
@@ -50,17 +50,17 @@
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
     },
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.41.0",
-		"eslint": "^6.6.0",
-		"glob": "^7.1.5",
-		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
-		"vscode-test": "^1.2.2"
-	},
+    "devDependencies": {
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.41.0",
+        "eslint": "^6.6.0",
+        "glob": "^7.1.5",
+        "mocha": "^6.2.2",
+        "typescript": "^3.6.4",
+        "vscode-test": "^1.2.2"
+    },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/jayliang701/vscode-plugin-code-monster/issues"
@@ -69,5 +69,8 @@
         "type": "git",
         "url": "https://github.com/jayliang701/vscode-plugin-code-monster"
     },
-    "homepage": "https://github.com/jayliang701/vscode-plugin-code-monster/blob/master/README.md"
+    "homepage": "https://github.com/jayliang701/vscode-plugin-code-monster/blob/master/README.md",
+    "dependencies": {
+        "codemonster": "^1.0.1"
+    }
 }
