@@ -1,12 +1,13 @@
 const vscode = require('vscode');
 const path = require('path');
 const fs = require('fs');
-const cp = require('child_process');
+const codemonster = require('codemonster');
 
 let items = [
     { description: 'React/ReactNative code templates', label: 'react' },
     { description: 'NodeJS project templates', label: 'node' },
-    { description: 'Web project templates', label: 'web' }
+    { description: 'Web project templates', label: 'web' },
+    { description: 'Java project templates', label: 'java' }
 ];
 
 const showView = async (context) => {
@@ -39,15 +40,34 @@ module.exports = function (context) {
     context.subscriptions.push(vscode.commands.registerCommand('extension.chooseTemplate', async (uri) => {
         try {
             let folderPath = await getFolderPath(uri.fsPath);
-            console.log(folderPath);
             let args = await showView(context);
             if (args) {
-                args.push(`-output="${folderPath}"`);
-                let cmd = buildCommand(args);
-                cp.execSync(cmd);
+
+                let vars = {};
+                for (let arg of args) {
+                    if (arg.startsWith('-')) {
+                        let key = arg.substr(1);
+                        let val = true;
+                        if (key.indexOf('=') > 0) {
+                            val = key.substr(key.indexOf('=') + 1);
+                            if (val.startsWith('\'') || val.startsWith('"')) {
+                                val = val.substr(1, val.length - 2);
+                            }
+                        }
+                        vars[key] = val;
+                    }
+                }
+
+                await codemonster.runAsModule({
+                    output: folderPath,
+                    ...vars,
+                }, [
+                    ...args,
+                ]);
             }
         } catch (err) {
             console.error(err);
+            vscode.window.showErrorMessage(err.message);
         }
     }));
 };
