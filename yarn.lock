@@ -153,6 +153,11 @@ camelcase@^5.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
+capitalization@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/capitalization/-/capitalization-1.0.0.tgz#0f4c936098d2e6e1f552a1560233e3028c9e5324"
+  integrity sha512-YID/lmvT5o3hs/UvDH+r/kPGWpNSRwtNaTMDRsH85Hor6N8gv4iikDHSzDz0nK8FXh8X1UTl6S5ZpfB2/gP1Tg==
+
 chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -188,10 +193,12 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codemonster@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/codemonster/-/codemonster-1.0.3.tgz#de7beca075df9533b2ff6d0ec0e175cb7f8babed"
-  integrity sha512-kF3L22//Qc/DhfVVA/YDog9VMJOSLB20YwXOzQ9ZeIdSK4hDShSVnndEqqg34j1tNoswcxyb3ALqn54ULhKEoA==
+codemonster@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/codemonster/-/codemonster-1.0.5.tgz#a7502cbe0d998792625292708891e873586f2da6"
+  integrity sha512-g8YJQIaB2Lb9rCckj+Ik/aw1DbB0UfcyMi0fvIW/5MpI0rFWtNkBhyE+AdmtuZbHs7dFTsbTsh0yx6X+CwORow==
+  dependencies:
+    capitalization "^1.0.0"
 
 color-convert@^1.9.0:
   version "1.9.3"
