@@ -1,3 +1,4 @@
 # vscode-plugin-code-monster
 
-A vscode plugin for generating code.
+A vscode plugin for generating code template file.
+
