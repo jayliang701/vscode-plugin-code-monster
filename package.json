@@ -49,7 +49,8 @@
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test",
-        "publish": "vsce publish"
+        "publish": "vsce publish --yarn",
+        "package": "vsce package --yarn"
     },
     "devDependencies": {
         "@types/glob": "^7.1.1",
@@ -72,6 +73,6 @@
     },
     "homepage": "https://github.com/jayliang701/vscode-plugin-code-monster/blob/master/README.md",
     "dependencies": {
-        "codemonster": "^1.0.6"
+        "codemonster": "^1.0.7"
     }
 }
