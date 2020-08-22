@@ -193,10 +193,10 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-codemonster@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/codemonster/-/codemonster-1.0.5.tgz#a7502cbe0d998792625292708891e873586f2da6"
-  integrity sha512-g8YJQIaB2Lb9rCckj+Ik/aw1DbB0UfcyMi0fvIW/5MpI0rFWtNkBhyE+AdmtuZbHs7dFTsbTsh0yx6X+CwORow==
+codemonster@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/codemonster/-/codemonster-1.0.9.tgz#fe85f35f56e8e871d992532423ec236766ccc540"
+  integrity sha512-TjVuLaWnA1Nc8946iF0RgqvLHai/vGYGrOcWYtJoikR12eJYpLIuGS5miX1L6iBCJOpcMzTbijPE8LYUCMs6SA==
   dependencies:
     capitalization "^1.0.0"
 

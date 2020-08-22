@@ -8,7 +8,7 @@
         "template",
         "generation"
     ],
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publisher": "jayliang701",
     "engines": {
         "vscode": "^1.41.0"
@@ -73,6 +73,6 @@
     },
     "homepage": "https://github.com/jayliang701/vscode-plugin-code-monster/blob/master/README.md",
     "dependencies": {
-        "codemonster": "^1.0.7"
+        "codemonster": "^1.0.9"
     }
 }
